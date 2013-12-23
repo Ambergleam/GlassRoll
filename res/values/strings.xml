@@ -1,5 +1,7 @@
 <resources>
 
     <string name="app_name">Glass Die Roll</string>
+    <string name="default_die">d6</string>
+    <string name="default_result">0</string>
 
 </resources>

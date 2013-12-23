@@ -1,7 +1,9 @@
 /home/ambergleam/git/Glass/GlassRoll/bin/classes.dex : \
+/home/ambergleam/git/Glass/GlassRoll/bin/classes/R.java.d \
 /home/ambergleam/git/Glass/GlassRoll/bin/classes/com/jzplusplus/glassroll/R$id.class \
 /home/ambergleam/git/Glass/GlassRoll/bin/classes/com/jzplusplus/glassroll/R$string.class \
 /home/ambergleam/git/Glass/GlassRoll/bin/classes/com/jzplusplus/glassroll/R$attr.class \
+/home/ambergleam/git/Glass/GlassRoll/bin/classes/com/jzplusplus/glassroll/R$color.class \
 /home/ambergleam/git/Glass/GlassRoll/bin/classes/com/jzplusplus/glassroll/BuildConfig.class \
 /home/ambergleam/git/Glass/GlassRoll/bin/classes/com/jzplusplus/glassroll/R$dimen.class \
 /home/ambergleam/git/Glass/GlassRoll/bin/classes/com/jzplusplus/glassroll/R.class \

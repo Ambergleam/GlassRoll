@@ -1,13 +1,11 @@
 package com.jzplusplus.glassroll;
 
 import java.text.NumberFormat;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Random;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.graphics.Color;
+import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.KeyEvent;
 import android.widget.TextView;
@@ -36,13 +34,15 @@ public class MainActivity extends Activity {
 			nf.setParseIntegerOnly(true);
 			try {
 				// Convert to a number
-				String voiceResultsString = voiceResults.get(0).substring(1);
+				String voiceResultsString = voiceResults.get(0);
 				dieValue = nf.parse(voiceResultsString).intValue();
-			} catch (ParseException e) {
+			} catch (Exception e) {
 				// Didn't properly convert so exit out
 				finish();
 			}
 		}
+		// Display the die-type
+		((TextView) findViewById(R.id.die)).setText("d" + Integer.toString(dieValue));
 		rollIt();
 	}
 
@@ -54,11 +54,14 @@ public class MainActivity extends Activity {
 		int value = rand.nextInt(dieValue) + 1;
 		((TextView) findViewById(R.id.result)).setText(Integer.toString(value));
 		if (value == 1)
-			findViewById(R.id.mainview).setBackgroundColor(Color.rgb(255, 0, 0));
+			// Turn screen red on lowest roll
+			findViewById(R.id.mainview).setBackgroundColor(getResources().getColor(R.color.red));
 		else if (value == dieValue)
-			findViewById(R.id.mainview).setBackgroundColor(Color.rgb(0, 255, 0));
+			// Turn screen green on highest roll
+			findViewById(R.id.mainview).setBackgroundColor(getResources().getColor(R.color.green));
 		else
-			findViewById(R.id.mainview).setBackgroundColor(Color.rgb(0, 0, 0));
+			// Default screen is black
+			findViewById(R.id.mainview).setBackgroundColor(getResources().getColor(R.color.black));
 	}
 
 	/*

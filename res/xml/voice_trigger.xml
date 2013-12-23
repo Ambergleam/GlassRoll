@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <trigger keyword="Roll a die">
-    <input prompt="Which die (d6, d20, etc)?" />
+    <input prompt="How many sides?" />
 </trigger>
